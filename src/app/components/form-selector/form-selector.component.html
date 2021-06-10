@@ -1,0 +1,5 @@
+<form [formGroup]="myFormSelector" (change)="changeUser(myFormSelector.value.id)">
+  <select [formControlName]="'id'">
+    <option value="{{user.id}}" *ngFor="let user of users">{{user.id}}. {{user.name}}</option>
+  </select>
+</form>
